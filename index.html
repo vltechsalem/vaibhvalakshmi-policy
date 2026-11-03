@@ -27,7 +27,7 @@
             padding: 24px 16px;
         }
         .container {
-            max-width: 820px;
+            max-width: 840px;
             margin: 0 auto;
             background: var(--card-bg);
             padding: 36px 32px;
@@ -48,6 +48,7 @@
         .meta {
             color: var(--text-muted);
             font-size: 13.5px;
+            line-height: 1.5;
         }
         h2 {
             color: var(--primary);
@@ -58,7 +59,7 @@
             border-bottom: 1px solid #EEEEEE;
         }
         h3 {
-            font-size: 16px;
+            font-size: 15.5px;
             margin-top: 16px;
             margin-bottom: 8px;
             color: #2E7D32;
@@ -85,6 +86,14 @@
             border-radius: 6px;
             margin-bottom: 12px;
         }
+        .disclaimer-box {
+            background: #FFF9C4;
+            border-left: 4px solid #FBC02D;
+            padding: 16px;
+            border-radius: 6px;
+            margin: 18px 0;
+            font-size: 13.5px;
+        }
         .contact-box {
             background: var(--primary-light);
             border-left: 4px solid var(--primary);
@@ -107,40 +116,52 @@
     <div class="container">
         <header>
             <span class="badge">Official Policy</span>
-            <h1>Privacy Policy</h1>
+            <h1>Privacy Policy & Astrological Disclaimer</h1>
             <div class="meta">
                 <strong>Application:</strong> Vaibhavalakshmi Tamil Astro (<code>com.vaibhavalakshmi.tamil.astro</code>)<br>
                 <strong>Developer:</strong> Vaibhavalakshmi Technologies<br>
-                <strong>Last Updated:</strong> October 08, 2026
+                <strong>Jurisdiction:</strong> Salem, Tamil Nadu, India<br>
+                <strong>Last Updated:</strong> November 03, 2026
             </div>
         </header>
 
         <section>
             <h2>1. Introduction</h2>
             <p>Welcome to <strong>Vaibhavalakshmi Tamil Astro</strong> ("we", "our", or "us"). We respect your privacy and are committed to protecting any personal information that you provide when using our mobile application.</p>
-            <p>This Privacy Policy explains how our application collects, uses, stores, and protects your information, and outlines your rights in relation to your personal data in compliance with Google Play Developer Policies.</p>
+            <p>This Privacy Policy explains how our application collects, uses, stores, and protects your information, outlines your rights in relation to your personal data, and details our legal disclaimers and limitations of liability in compliance with Google Play Developer Policies and applicable Indian laws.</p>
         </section>
 
         <section>
             <h2>2. Information We Collect and Process</h2>
             
-            <h3>A. Astrological Input Data (Provided by You)</h3>
+            <h3>A. Astrological Birth Data (Provided by You)</h3>
             <p>To compute authentic Vedic astrological charts, Panchangam, Dasa-Bhukti-Antharam timelines, and marriage matching compatibility, you may optionally input:</p>
             <ul>
                 <li><strong>Name and Family Details</strong> (Person Name, Father's Name)</li>
                 <li><strong>Birth Particulars</strong> (Date of Birth, Time of Birth)</li>
-                <li><strong>Birth Place</strong> (City, State, Country, Latitude & Longitude)</li>
-                <li><strong>Gender</strong> (for Marriage Matching evaluation)</li>
+                <li><strong>Birth Place</strong> (City, State, Country, Latitude & Longitude coordinates)</li>
+                <li><strong>Gender</strong> (for Marriage Matching evaluation and planetary karaka assignment)</li>
             </ul>
-            <p><strong>Local Storage:</strong> All entered birth records are stored <strong>strictly locally on your device</strong> via Android local storage (<code>SharedPreferences</code>). We do <strong>NOT</strong> upload, sync, or sell your birth records to any external cloud database.</p>
+            <p><strong>Local Storage:</strong> All entered birth records are stored <strong>strictly locally on your device</strong> via Android's private sandboxed storage (<code>SharedPreferences</code>). We do <strong>NOT</strong> upload, sync, or sell your birth records to any external cloud database.</p>
 
             <h3>B. Astrologer Office Branding Settings</h3>
-            <p>If you enter your Astrologer Center details (Center Name, Contact Phone Number, Top Invocation), these details remain on your device only to personalize your exported Single-Page Horoscope and 10-Page Brihat Horoscope PDF reports.</p>
+            <p>If you enter your Astrologer Center details (Center Name, Contact Phone Number, Top Invocation), these details remain on your device only to personalize your exported Single-Page Horoscope and Brihat Maha Horoscope PDF reports.</p>
 
-            <h3>C. AI Astrologer Consultations</h3>
-            <p>When you ask queries via the AI Astrologer feature, astrological context parameters (planetary placements, Lagna, Dasa period) and your specific question are securely transmitted via encrypted HTTPS to Google Generative AI services solely to generate the astrological interpretation.</p>
+            <h3>C. AI Astrologer Consultations & Quality Logging</h3>
+            <p>When you ask queries via the AI Astrologer text chat or live voice call feature:</p>
+            <ul>
+                <li><strong>Encrypted Transmission:</strong> Astrological context parameters (planetary placements, Lagna, Dasa periods) and your consultation query are transmitted securely via encrypted HTTPS to secure cloud-based Artificial Intelligence (AI) and automated Vedic natural language processing systems solely to generate the astrological guidance.</li>
+                <li><strong>Quality & Compliance Logging:</strong> Consultation queries and AI responses are transmitted securely via encrypted HTTPS and may be reviewed confidentially by our internal administrative team solely to verify prediction accuracy, monitor compliance with strict ethical/legal guardrails (including prohibitions against fetal sex determination under the PCPNDT Act, suicide/self-harm, and defamation), and enhance guidance quality.</li>
+                <li><strong>No Advertising Profiling:</strong> We strictly do not sell, rent, or use consultation transcripts for commercial ad profiling or third-party marketing.</li>
+            </ul>
 
-            <h3>D. App Analytics & Technical Data (Google Firebase Analytics)</h3>
+            <h3>D. Audio & Microphone Access (Live Voice Call)</h3>
+            <p>The application requests microphone permission (<code>android.permission.RECORD_AUDIO</code>) solely when you actively initiate and interact with the Live AI Astrologer voice call feature to speak your question. Your spoken audio is streamed in real time via encrypted HTTPS directly for speech recognition and astrological answer generation. Audio is processed transiently and is never recorded in the background or permanently stored on our servers.</p>
+
+            <h3>E. In-App Purchases & Wallet Recharges</h3>
+            <p>Recharges for additional consultation questions are processed exclusively and securely through <strong>Google Play In-App Billing</strong> (<code>com.android.vending.BILLING</code>). We do not collect, process, or store credit/debit card numbers, banking credentials, or UPI PINs.</p>
+
+            <h3>F. App Analytics & Technical Telemetry (Google Firebase Analytics)</h3>
             <p>To monitor app performance, screen stability, and feature usage patterns, we use <strong>Google Firebase Analytics</strong>:</p>
             <ul>
                 <li><strong>Aggregated Interaction Data:</strong> We track anonymous aggregated metrics such as app open events, screen views (e.g. Panchangam, Horoscope charts, or Marriage Matching), and general usage durations.</li>
@@ -152,15 +173,16 @@
         <section>
             <h2>3. What We DO NOT Collect</h2>
             <ul>
-                <li>We do <strong>NOT</strong> collect financial account numbers, credit/debit card numbers, or banking credentials.</li>
-                <li>We do <strong>NOT</strong> access your device contacts, microphone, camera, SMS, or media gallery.</li>
-                <li>We do <strong>NOT</strong> track your GPS location in the background.</li>
+                <li>❌ We do <strong>NOT</strong> collect financial account numbers, credit/debit card numbers, or banking credentials.</li>
+                <li>❌ We do <strong>NOT</strong> access your device contacts, SMS, camera, or media gallery.</li>
+                <li>❌ We do <strong>NOT</strong> track your GPS location in the background.</li>
+                <li>❌ We do <strong>NOT</strong> access your microphone in the background. Microphone access is strictly activated only when you explicitly tap to speak during an AI Voice Call session.</li>
             </ul>
         </section>
 
         <section>
             <h2>4. Advertising & Data Sharing</h2>
-            <p><strong>Version 1.0.0 is completely ad-free.</strong> There are no advertising trackers or marketing analytics active in this release. We do not sell, rent, or trade your personal information to data brokers or third parties.</p>
+            <p><strong>Completely Ad-Free:</strong> The application contains no third-party advertising trackers or ad networks. We do not sell, rent, or trade your personal information to data brokers or third parties.</p>
         </section>
 
         <section>
@@ -173,18 +195,62 @@
             <p>You have full control over your stored records:</p>
             <ul>
                 <li>You can delete individual saved customer charts at any time from the app's Customer Profiles manager.</li>
-                <li>Uninstalling the app or choosing <em>Clear Storage / Clear Data</em> in Android Settings permanently removes all saved horoscopes from your phone.</li>
+                <li>Uninstalling the app or choosing <em>Clear Storage / Clear Data</em> in Android Settings permanently removes all saved horoscopes and cached data from your phone.</li>
             </ul>
         </section>
 
         <section>
-            <h2>7. Contact Us</h2>
-            <p>If you have any questions, feedback, or data privacy inquiries regarding Vaibhavalakshmi Tamil Astro, please feel free to reach out:</p>
+            <h2>7. Astrological & AI Disclaimer, Limitation of Liability, and Terms of Use</h2>
+            
+            <div class="disclaimer-box">
+                <strong>⚠️ Legal Notice & Disclaimer:</strong> Vedic Astrology is an ancient, traditional, interpretative spiritual discipline. It is provided solely for personal reflection, cultural, and spiritual guidance.
+            </div>
+
+            <h3>A. Traditional Faith-Based Discipline (No Infallible Guarantees)</h3>
+            <p>Due to the inherent nature of astrological interpretations, <strong>NO guarantee of 100% accuracy, certainty, or specific life outcomes is expressed or implied</strong>. Astrology cannot alter free will or destiny, and users are solely responsible for all personal, financial, career, marital, and life decisions.</p>
+
+            <h3>B. Artificial Intelligence Technology ("AS-IS" Basis)</h3>
+            <p>Astrological consultations and responses are powered by advanced Artificial Intelligence (AI) and automated algorithmic natural language processing systems interpreting classical Parashara principles. All AI consultations are provided on an <strong>"AS-IS" and "AS-AVAILABLE" basis without warranties of any kind</strong>.</p>
+
+            <h3>C. Not a Substitute for Professional Medical, Legal, or Financial Advice</h3>
+            <p>The app and its AI consultations <strong>DO NOT</strong> provide professional medical diagnosis, psychiatric counseling, certified legal advice, or licensed financial/investment counsel:</p>
+            <ul>
+                <li><strong>Medical / Health:</strong> Never disregard, delay, or substitute professional medical treatment or clinical consultations because of astrological predictions.</li>
+                <li><strong>Financial / Legal:</strong> For major financial investments, real estate purchases, business ventures, or legal disputes, users must consult licensed attorneys, chartered accountants, and certified investment advisors.</li>
+            </ul>
+
+            <h3>D. Limitation of Developer Liability</h3>
+            <p>Under no circumstances shall the developer, application owners, or affiliates be liable for any direct, indirect, incidental, special, punitive, or consequential damages resulting from:</p>
+            <ul>
+                <li>Any decision made or action taken by the user based on astrological guidance, predictions, or remedies provided by the app.</li>
+                <li>Emotional distress, subjective dissatisfaction with predictions, or unexpected personal life events.</li>
+            </ul>
+            <p>The developer's total cumulative liability, if any, for any claim arising out of the use of this application shall be strictly capped and limited to the exact amount paid by the user for the specific consultation token via Google Play Billing.</p>
+
+            <h3>E. Non-Refundable Computational Service</h3>
+            <p>Wallet recharges are strictly for the computational processing and infrastructure resources consumed to calculate Vedic charts and generate automated AI responses. Once an astrological query is submitted and answered by the AI, the computational service is deemed fully delivered and non-refundable.</p>
+
+            <h3>F. Governing Law & Exclusive Jurisdiction</h3>
+            <p>This Privacy Policy and any disputes or claims arising out of or in connection with the use of Vaibhavalakshmi Tamil Astro shall be governed by and construed in accordance with the laws of India, and shall be subject to the exclusive jurisdiction of the competent courts in <strong>Salem, Tamil Nadu, India</strong>.</p>
+        </section>
+
+        <section>
+            <h2>8. Children's Privacy</h2>
+            <p>Vaibhavalakshmi Tamil Astro does not knowingly collect personal identifiable information from children under the age of 13. The application is intended for general audiences interested in traditional Vedic astrology and calendar calculations.</p>
+        </section>
+
+        <section>
+            <h2>9. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy periodically to reflect app enhancements, legal requirements, or Google Play policy updates. Any changes will be posted with an updated "Last Updated" date. We encourage you to review this page periodically.</p>
+        </section>
+
+        <section>
+            <h2>10. Contact Us</h2>
+            <p>If you have any questions, feedback, legal inquiries, or data privacy requests regarding Vaibhavalakshmi Tamil Astro, please feel free to reach out:</p>
             <div class="contact-box">
                 <strong>Vaibhavalakshmi Technologies</strong><br>
                 Salem, Tamil Nadu, India<br>
-                <strong>Email:</strong> <a href="mailto:vltechsalem@gmail.com" style="color: var(--primary);">vltechsalem@gmail.com</a><br>
-                <strong>WhatsApp / Phone:</strong> +91 63820 15774
+                <strong>Email:</strong> <a href="mailto:vltechsalem@gmail.com" style="color: var(--primary);">vltechsalem@gmail.com</a>
             </div>
         </section>
 
